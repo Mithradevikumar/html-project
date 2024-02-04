@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">FREELANCING</label>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#feedback">FEEDBACK</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="main-content">
+        <h1>Welcome to Freelancing</h1>
+        <p>This is the home page content. Add your details and information here.</p>
+    </div>
+     <div id="about" class="main-content">
+        <h1>About Us</h1>
+        <p>This is the about us page content. Add details about your company or team here.</p>
+    </div>
+
+    <div id="services" class="main-content">
+        <h1>Our Services</h1>
+        <p>This is the services page content. Describe the services your company offers.</p>
+    </div>
+
+    <div id="feedback" class="main-content">
+        <h1>Feedback</h1>
+        
+        <!-- Feedback Form -->
+        <form id="feedbackForm" onsubmit="submitFeedback(); return false;">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" required>
+            
+            <label for="userFeedback">Feedback:</label>
+            <textarea id="userFeedback" name="userFeedback" rows="4" required></textarea>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <!-- Display Feedback -->
+        <div id="feedbackList"></div>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            var userName = document.getElementById("userName").value;
+            var userFeedback = document.getElementById("userFeedback").value;
+            var feedbackList = document.getElementById("feedbackList");
+
+            // Display feedback on the page (you can modify this to send data to a server)
+            var feedbackItem = document.createElement("div");
+            feedbackItem.innerHTML = `<strong>${userName}:</strong> ${userFeedback}`;
+            feedbackList.appendChild(feedbackItem);
+
+            // Clear the form
+            document.getElementById("feedbackForm").reset();
+        }
+    </script>
+</body>
+</html>
+
+
+{ABOUT}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">FREELANCING</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h1>About Us</h1>
+        <p>This is the about us page content. Add details about your company or team here.</p>
+    </div>
+</body>
+</html>
+
+{SERVICES}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">FREELANCING</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h1>Our Services</h1>
+        <p>This is the services page content. Describe the services your company offers.</p>
+    </div>
+</body>
+</html>
+
+
+{feedback}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">FREELANCING</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h1>Feedback</h1>
+        
+        <!-- Feedback Form -->
+        <form id="feedbackForm" onsubmit="submitFeedback(); return false;">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" required>
+            
+            <label for="userFeedback">Feedback:</label>
+            <textarea id="userFeedback" name="userFeedback" rows="4" required></textarea>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <!-- Display Feedback -->
+        <div id="feedbackList"></div>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            var userName = document.getElementById("userName").value;
+            var userFeedback = document.getElementById("userFeedback").value;
+            var feedbackList = document.getElementById("feedbackList");
+
+            // Display feedback on the page (you can modify this to send data to a server)
+            var feedbackItem = document.createElement("div");
+            feedbackItem.innerHTML = `<strong>${userName}:</strong> ${userFeedback}`;
+            feedbackList.appendChild(feedbackItem);
+
+            // Clear the form
+            document.getElementById("feedbackForm").reset();
+        }
+    </script>
+</body>
+</html>
+
+
+
+{STYLE}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #010137;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: #3433f8;
+    display: flex;
+    align-items: center;
+}
+
+label.logo {
+    font-family: cursive;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    font-size: 17px;
+    text-transform: uppercase;
+    justify-content: space-around;
+    padding: 15px 0;
+    display: flex;
+}
+
+nav a.active, nav a:hover {
+    background-color: #1b9bff;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-content {
+    text-align: center;
+    margin: 50px;
+}
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
